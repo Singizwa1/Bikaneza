@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stock_management/navigationbar/bottom_bar.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -138,12 +139,10 @@ class _LoginScreenState extends State<Login> {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
-                            if (_formKey.currentState?.validate() == true) {
-                              _formKey.currentState?.save();
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Logging in…')),
-                              );
-                            }
+                           Navigator.pushReplacement(
+                            context, 
+                           MaterialPageRoute(builder:(context)=>BarScreen()),
+                           );
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.deepOrangeAccent,

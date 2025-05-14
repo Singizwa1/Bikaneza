@@ -9,15 +9,15 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
      
-backgroundColor: Colors.black12,     
+backgroundColor: Colors.white,     
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
-          // Center everything vertically
+        
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // "Logo" text centered
+          
             Text(
               "BikaNeza",
               textAlign: TextAlign.center,
@@ -47,9 +47,9 @@ backgroundColor: Colors.black12,
             InkWell(
               onTap: () {
                  Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => const Login()),
-    );
+               context,
+              MaterialPageRoute(builder: (_) => const Login()),
+               );
               
               },
               child: Container(
