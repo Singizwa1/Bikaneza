@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stock_management/navigationbar/homepage.dart';
 import 'package:stock_management/navigationbar/stock_screen.dart';
 import 'package:stock_management/navigationbar/report_screen.dart';
 import 'package:stock_management/navigationbar/profile_screen.dart';
@@ -14,6 +15,7 @@ class _BottomBarState extends State<BarScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
+    HomePageScreen(),
     StockScreen(),
     ReportsScreen(),
     ProfileScreen(),
@@ -31,7 +33,11 @@ class _BottomBarState extends State<BarScreen> {
           });
         },
         selectedItemColor: Colors.deepOrangeAccent,
+        unselectedItemColor: Colors.black, 
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.inventory), label: 'Stock'),
           BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: 'Reports'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
